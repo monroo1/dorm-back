@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dorms",
+  "info": {
+    "singularName": "dorm",
+    "pluralName": "dorms",
+    "displayName": "Dorm"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dorm": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "dorm"
+    }
+  }
+}
