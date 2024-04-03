@@ -9,5 +9,8 @@ export default factories.createCoreRouter("api::invite.invite", {
     create: {
       middlewares: ["api::invite.send-email"],
     },
+    find: {
+      middlewares: ["api::invite.get-user-invites"]
+    }
   },
 });
